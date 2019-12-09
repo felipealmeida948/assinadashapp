@@ -1,6 +1,7 @@
 import 'package:assinaturadashapp/styles/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:line_awesome_icons/line_awesome_icons.dart';
+import 'package:assinaturadashapp/widgets/cardSummary.dart';
 
 class DashboardPage extends StatefulWidget {
   @override
@@ -53,50 +54,20 @@ Widget _summaryCard(BuildContext context) {
                 padding: EdgeInsets.fromLTRB(10.0, 15.0, 10.0, 15.0),
                 child: Column(
                   children: <Widget>[
-                    const ListTile(
-                      leading: Icon(
-                        LineAwesomeIcons.user_plus,
-                        size: 50.0,
-                        color: Colors.white,
-                      ),
-                      title: Text(
-                        "1.372",
-                        style: Styles.cardFirtSumaryItemText,
-                      ),
-                      subtitle: Text(
-                        "Assinantes ativos",
-                        style: Styles.cardSecondarySumaryItemText,
-                      ),
+                    CardItemSummary(
+                      cardTitleLarge: '1.372',
+                      cardSubtitle: 'Assinantes ativos',
+                      icon: LineAwesomeIcons.users,
                     ),
-                    const ListTile(
-                      leading: Icon(
-                        LineAwesomeIcons.user_plus,
-                        size: 50.0,
-                        color: Colors.white,
-                      ),
-                      title: Text(
-                        "1.372",
-                        style: Styles.cardFirtSumaryItemText,
-                      ),
-                      subtitle: Text(
-                        "Assinantes ativos",
-                        style: Styles.cardSecondarySumaryItemText,
-                      ),
+                    CardItemSummary(
+                      cardTitleLarge: 'R\$\:88,85',
+                      cardSubtitle: 'Ticket médio',
+                      icon: LineAwesomeIcons.shopping_cart,
                     ),
-                    const ListTile(
-                      leading: Icon(
-                        LineAwesomeIcons.user_plus,
-                        size: 50.0,
-                        color: Colors.white,
-                      ),
-                      title: Text(
-                        "1.372",
-                        style: Styles.cardFirtSumaryItemText,
-                      ),
-                      subtitle: Text(
-                        "Assinantes ativos",
-                        style: Styles.cardSecondarySumaryItemText,
-                      ),
+                    CardItemSummary(
+                      cardTitleLarge: '120.527',
+                      cardSubtitle: 'RBV previsto',
+                      icon: LineAwesomeIcons.money,
                     ),
                   ],
                 ),

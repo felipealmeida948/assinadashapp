@@ -23,6 +23,7 @@ abstract class Styles {
     fontWeight: FontWeight.w500,
   );
 
+  //Styles do card princila sobre
   static const cardFirtSumaryItemText = TextStyle(
     color: whiteColor,
     fontWeight: FontWeight.w700,
