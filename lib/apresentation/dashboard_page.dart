@@ -13,9 +13,10 @@ class _DashboardPageState extends State<DashboardPage> {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 20.0),
-      child: Column(
+      child: ListView(
         children: <Widget>[
           _summaryCard(context),
+          _card(context)
         ],
       ),
     );
@@ -77,5 +78,11 @@ Widget _summaryCard(BuildContext context) {
         ),
       ],
     ),
+  );
+}
+
+Widget _card(BuildContext context) {
+  return Container(
+    child: Center(child: Text('aqui'),),
   );
 }
