@@ -30,6 +30,12 @@ abstract class Styles {
     fontSize: 28.0
   );
 
+  static const cardTitleSecondary = TextStyle(
+    color: whiteColor,
+    fontWeight: FontWeight.w700,
+    fontSize: 26.0
+  );
+
   static const cardSecondarySumaryItemText = TextStyle(
     color: whiteColor,
     fontWeight: FontWeight.w300,

@@ -16,7 +16,7 @@ class _DashboardPageState extends State<DashboardPage> {
       child: ListView(
         children: <Widget>[
           _summaryCard(context),
-          _card(context)
+          _cardSubscriblesChannel(context),
         ],
       ),
     );
@@ -33,6 +33,7 @@ Widget _summaryCard(BuildContext context) {
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               Container(
+                margin: EdgeInsets.fromLTRB(0, 10, 0, 15),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20.0),
                   boxShadow: [
@@ -61,7 +62,7 @@ Widget _summaryCard(BuildContext context) {
                       icon: LineAwesomeIcons.users,
                     ),
                     CardItemSummary(
-                      cardTitleLarge: 'R\$\:88,85',
+                      cardTitleLarge: 'R\$\88,85',
                       cardSubtitle: 'Ticket médio',
                       icon: LineAwesomeIcons.shopping_cart,
                     ),
@@ -81,8 +82,61 @@ Widget _summaryCard(BuildContext context) {
   );
 }
 
-Widget _card(BuildContext context) {
+Widget _cardSubscriblesChannel(BuildContext context) {
   return Container(
-    child: Center(child: Text('aqui'),),
+    child: Column(
+      children: <Widget>[
+        Container(
+          decoration: BoxDecoration(),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Container(
+                margin: EdgeInsets.fromLTRB(0, 10, 0, 15),
+                decoration: BoxDecoration(
+                  color: const Color(0xff2A2A2A),
+                  borderRadius: BorderRadius.circular(20.0),
+                  boxShadow: [
+                    BoxShadow(
+                      color: const Color(0x512A2A2A),
+                      blurRadius: 15.0,
+                      offset: Offset(0, 5.0),
+                    )
+                  ],
+                ),
+                padding: EdgeInsets.fromLTRB(10.0, 15.0, 10.0, 15.0),
+                child: Column(
+                  children: <Widget>[
+                    Row(
+                      children: <Widget>[
+                        Padding(
+                          padding: EdgeInsets.all(10),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                'Assinantes por',
+                                style: Styles.cardSecondarySumaryItemText,
+                              ),
+                              Transform(
+                                transform: Matrix4.translationValues(0, -8, 0),
+                                child: Text(
+                                  'Canal',
+                                  style: Styles.cardTitleSecondary,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
+        ),
+      ],
+    ),
   );
 }
